@@ -7,3 +7,9 @@ h1{
 p {
     padding:20px;
 }
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none; /* Removes bullet points */
+  gap: 20px;       /* Adds space between items */
+}
