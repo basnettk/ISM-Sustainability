@@ -1,23 +1,50 @@
-# ISM Sustainability
+# ISM Sustainability Project
 
-Quick guide to running the website and the AI chatbot.
+This is a website that teaches people about sustainability at ISM. It has an AI-powered chatbot that can answer questions!
 
-## Running the Website
+## How to run the website
 
-1. **Install libraries**:
-   ```bash
-   python -m pip install flask requests
-   ```
-   *(If you get a "no module called flask" error, using `python -m pip` ensures it installs for the right version of Python).*
+Follow these steps to get the project working on your own computer.
 
-2. **Start the app**:
-   ```bash
-   python app.py
-   ```
+### 1. Install the "Brain" (Libraries)
+We need two libraries for the website to work: **Flask** (which runs the server) and **Requests** (which talks to the AI).
 
-3. **Open the site**:
-   Go to [http://127.0.0.1:5000](http://127.0.0.1:5000)
+**On Windows:**
+```bash
+python -m pip install flask requests
+```
+
+**On Mac:**
+```bash
+python3 -m pip install flask requests
+```
 
 ---
 
-Check [Project_Explanation.md](Project_Explanation.md) to see how the code works!
+### 2. Start the Website
+Now we tell the computer to start hosting the website files so people can see them.
+
+**On Windows:**
+```bash
+python app.py
+```
+
+**On Mac:**
+```bash
+python3 app.py
+```
+
+---
+
+### 3. Open it up!
+Once the command is running, you just need to visit the local web address in your browser:
+
+👉 **[http://127.0.0.1:5000](http://127.0.0.1:5000)**
+
+---
+
+### Troubleshooting
+- **"No module named flask"**: This usually means the installation in Step 1 failed or you have multiple versions of Python. Make sure to use `python -m pip`.
+- **"Address already in use"**: This means a server is already running. Close any old terminal windows and try again!
+
+For a full technical explanation of how the code works, check out [Project_Explanation.md](Project_Explanation.md).
