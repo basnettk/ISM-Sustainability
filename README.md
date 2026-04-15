@@ -6,8 +6,9 @@ Quick guide to running the website and the AI chatbot.
 
 1. **Install libraries**:
    ```bash
-   pip install flask requests
+   python -m pip install flask requests
    ```
+   *(If you get a "no module called flask" error, using `python -m pip` ensures it installs for the right version of Python).*
 
 2. **Start the app**:
    ```bash
