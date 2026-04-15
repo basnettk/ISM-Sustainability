@@ -1,9 +1,8 @@
-h1 {
-  color: #285238;
+h1{
+    color: #285238
 }
-
 p {
-  padding: 20px;
+    padding:20px;
 }
 
 nav ul {
@@ -11,6 +10,10 @@ nav ul {
   justify-content: center;
   list-style: none;
   gap: 20px;
+}
+
+nav{
+height: 40px
 }
 
 .row-container {
