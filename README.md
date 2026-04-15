@@ -31,7 +31,7 @@ python app.py
 ```bash
 python3 app.py
 ```
-
+OR JS RUN THE CODE ON PYCHARM
 ---
 
 ### 3. Open it up!
