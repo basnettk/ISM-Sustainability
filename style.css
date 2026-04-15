@@ -1,13 +1,41 @@
+h1 {
+  color: #285238;
+}
 
-h1{
-    color: #285238
-}
 p {
-    padding:20px;
+  padding: 20px;
 }
+
 nav ul {
   display: flex;
   justify-content: center;
-  list-style: none; /* Removes bullet points */
-  gap: 20px;       /* Adds space between items */
+  list-style: none;
+  gap: 20px;
+}
+
+.row-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.video-wrapper,
+.text-content {
+  flex: 1;
+}
+.video-wrapper iframe {
+  width: 560;
+  height: 315px;
+  border-radius: 8px;
+}
+.text-content {
+  min-width: 550px;
+}
+
+@media (max-width: 768px) {
+  .row-container {
+    flex-direction: column;
+  }
+}
+p {
+    font-family: "Helvetica Neue", Arial, sans-serif;
 }
