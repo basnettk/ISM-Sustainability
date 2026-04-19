@@ -41,7 +41,7 @@
 
             </div>
         <div class="text-content"  style ="padding: 8px;">
-            <p>BYOC stands for Bring Your Own Container. At ISM’s Kantina, single-use containers are not provided, so students are encouraged to bring reusable lunch boxes or water bottles. This helps reduce plastic waste and promotes more sustainable habits on campus. Since 14% of all litter comes from single-use beverage containers, reducing their use can make a significant difference in lowering overall waste.</p>
+            <p>BYOC stands for Bring Your Own Container. At ISM’s Kantina, single-use containers are not provided, so students are encouraged to bring reusable lunch boxes or water bottles. This helps reduce plastic waste and promotes more sustainable habits on campus. Since 14% of all litter in the world comes from single-use beverage containers, reducing their use can make a significant difference in lowering overall waste.</p>
     </div>
   </div>
 </div>
@@ -57,7 +57,7 @@
     <div class="card">
       <div class="card-body">
         <img src="sdg11.png" style="width: 250px; height:250px; display: block; margin: 0 auto;">
-        <p class="card-text">ISM supports SDG 11 through initiatives like BYOC, which reduce waste and help make the campus more sustainable.</p>
+        <p class="card-text">ISM contributes SDG 11 through initiatives like BYOC, which reduce waste and help make the campus more sustainable.</p>
         <a href="https://sdgs.un.org/goals/goal11" class="btn btn-primary" target="_blank" style ="background-color: #295F39; border: solid #295F39">Learn More</a>
       </div>
     </div>
@@ -67,7 +67,7 @@
     <div class="card">
       <div class="card-body">
         <img src="sdg12.png" style="width: 250px; height:250px; display: block; margin: 0 auto;">
-        <p class="card-text">BYOC supports SDG 12 by reducing single-use waste through using containers that can be reused, such as metal spoons, lunch boxes, etc.</p>
+        <p class="card-text">BYOC contributes SDG 12 by reducing single-use waste through using containers/cutlery that can be reused, such as metal spoons, lunch boxes, etc.</p>
         <a href="https://sdgs.un.org/goals/goal12" class="btn btn-primary" target="_blank" style ="background-color: #295F39; border: solid #295F39">Learn more</a>
       </div>
     </div>
@@ -84,6 +84,36 @@
   </div>
 </div>
 <h3 style = "padding: 10px"></h3>
+
+<script>
+  function toggleChat() {
+    document.getElementById('<chatb></chatb>ox').classList.toggle('open');
+  }
+
+  async function send() {
+    var input = document.getElementById('chatinput');
+    var msg = input.value.trim();
+    if (!msg) return;
+    input.value = '';
+
+    var msgs = document.getElementById('chatmsgs');
+    msgs.innerHTML += '<div class="usermsg">' + msg + '</div>';
+    msgs.innerHTML += '<div class="botmsg" id="typing">Typing...</div>';
+    msgs.scrollTop = msgs.scrollHeight;
+
+    var res = await fetch('/api/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message: msg })
+    });
+    var data = await res.json();
+
+    document.getElementById('typing').textContent = data.reply;
+    document.getElementById('typing').removeAttribute('id');
+    msgs.scrollTop = msgs.scrollHeight;
+  }
+</script>
+
 <footer style="background-color: #f5b700; padding: 10px;">
   <div style="text-align: center; line-height: 1.4;">
 
