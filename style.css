@@ -119,8 +119,26 @@ height: 40px
   }
 }
 .btn-primary:hover {
-    background-color: #F5B700FF !important;
-    border: solid #F5B700FF !important;
+    background-color: #F5B700 !important;
+    border: solid #F5B700 !important;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4), 0 4px 12px rgba(0,0,0,0.3) !important;
+}
+.btn-no-border {
+    border: none !important;
+    border-width: 0 !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+.navbar .btn {
+    font-size: 1.1rem !important;
+}
+
+.btn-no-border:hover {
+    border: none !important;
+    border-width: 0 !important;
+    border-color: transparent !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2) !important;
 }
 /* chatbot stuf */
 #chatbtn { position:fixed; bottom:24px; right:24px; width:50px; height:50px; background:#295F39; color:white; border:none; border-radius:50%; font-size:22px; cursor:pointer; }
