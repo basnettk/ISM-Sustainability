@@ -6,8 +6,25 @@ header {
     background: linear-gradient(to bottom, #295F39, #12361c);
 }
 .navbar {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+    min-height: 80px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.navbar .container-fluid {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 100%;
+}
+
+.navbar .container-fluid a.navbar-brand {
+    display: flex !important;
+    align-items: center !important;
+    height: 100%;
 }
 h1{
     color: #285238;
@@ -93,13 +110,17 @@ height: 40px
   }
 
   .text-content p {
-    padding: 10px;           /* smaller padding on mobile */
+    padding: 10px;
     font-size: 16px;
     word-wrap: break-word;
     overflow-wrap: break-word;
-    max-width: 100%;         /* ensures box doesn't exceed column */
-    box-sizing: border-box;  /* includes padding in width */
+    max-width: 100%;
+    box-sizing: border-box;
   }
+}
+.btn-primary:hover {
+    background-color: #F5B700FF !important;
+    border: solid #F5B700FF !important;
 }
 /* chatbot stuf */
 #chatbtn { position:fixed; bottom:24px; right:24px; width:50px; height:50px; background:#295F39; color:white; border:none; border-radius:50%; font-size:22px; cursor:pointer; }
